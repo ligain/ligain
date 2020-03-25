@@ -1,0 +1,12 @@
+---
+- name: Install & setup PostgreSQL 
+  hosts: all
+
+  tasks:
+    - name: Install PostgreSQL from stream
+      dnf:
+        name: 
+          - '@postgresql:10'
+          - 'postgresql-contrib'
+        state: present
+
